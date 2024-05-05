@@ -1,0 +1,116 @@
+---
+import sushi2 from "../icons/sushi2.svg";
+
+interface Slider {
+	text: string;
+	text2: string;
+	style: string;
+}
+const { text, text2 } = Astro.props;
+---
+
+<article class="text-5xl md:text-[12vw] overflow-hidden" id="text2">
+	<div class="slider-container">
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+
+		<p class="tracking uppercase flex text-nowrap">
+			{text}
+
+			<img class="mr-24" src={sushi2.src} alt="logo" />
+		</p>
+	</div>
+</article>
+
+<style>
+	article {
+		font-family: var(--text2);
+		color: #ccbb9b;
+		background-color: var(--primary);
+	}
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+		animation: slide 350s linear infinite;
+	}
+
+	@keyframes slide {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-500%);
+		}
+	}
+
+	.empty-text {
+		/* color: rgba(0, 0, 0, 0); 
+		-webkit-text-stroke: 1px var(--black); 
+		text-stroke-width: 1px;  */
+	}
+</style>

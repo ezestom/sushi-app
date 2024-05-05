@@ -1,0 +1,114 @@
+---
+import logo from "../icons/logo.svg";
+import sushi from "../icons/sushi.svg";
+import CursorFollow from "../components/CursorFollow.jsx";
+---
+
+<header
+	class="bg-[--primary] h-[100px] p-6 max-w-full flex justify-between items-center">
+	<div class="burger-icon flex flex-grow basis-0 z-20">
+		<label
+			class="burger bg-[--secondary] rounded-full transition fixed top-8"
+			for="burger">
+			<input class="line" type="checkbox" id="burger" />
+		</label>
+	</div>
+
+	<a href="" class="max-w-[150px] w-full z-20 fixed mx-auto left-0 right-0">
+		<img src={logo.src} alt="logo icon" />
+	</a>
+
+	<div class="flex flex-grow basis-0 justify-end gap-1">
+		<a
+			class="bg-[--secondary] text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer gap-2 z-20 fixed right-32 top-8">
+			<img src={sushi.src} alt="sushi icon" class="max-w-6" />Hacer pedido</a
+		>
+
+		<span class="z-20 top-8 fixed">
+			<CursorFollow client:load />
+		</span>
+	</div>
+</header>
+
+<style>
+	/* start burger btn styles */
+
+	.burger {
+		width: 50px;
+		height: 50px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		user-select: none;
+		cursor: pointer;
+		transition: 300ms;
+		border-radius: 100;
+	}
+	.burger input[type="checkbox"] {
+		appearance: none;
+		transition: 300ms;
+	}
+
+	.burger::before,
+	.burger::after {
+		content: "";
+		transition: 300ms;
+		transform-origin: center center;
+	}
+
+	.burger::before {
+		transform: translateY(8px);
+	}
+	.burger::after {
+		transform: translateY(-8px);
+	}
+	.burger .line,
+	.burger::before,
+	.burger::after {
+		width: 25px;
+		height: 1.5px;
+		display: block;
+		background-color: var(--primary);
+		border-radius: 5px;
+		position: absolute;
+	}
+
+	.burger .line:checked {
+		width: 0;
+		transition-delay: 100ms;
+	}
+	.burger:has(.line:checked)::before {
+		animation: animation1 400ms ease-out 0s 1 both;
+	}
+	.burger:has(.line:checked)::after {
+		animation: animation2 400ms ease-out 0s 1 both;
+	}
+
+	.burger:active {
+		scale: 0.95;
+	}
+	@keyframes animation1 {
+		0% {
+			transform: translateY(8px) rotate(0deg);
+		}
+		50% {
+			transform: translateY(0px) rotate(0deg);
+		}
+		100% {
+			transform: translateY(0px) rotate(45deg);
+		}
+	}
+	@keyframes animation2 {
+		0% {
+			transform: translateY(-8px) rotate(0deg);
+		}
+		50% {
+			transform: translateY(0px) rotate(0deg);
+		}
+		100% {
+			transform: translateY(0px) rotate(-45deg);
+		}
+	}
+	/* end burger btn styles */
+</style>

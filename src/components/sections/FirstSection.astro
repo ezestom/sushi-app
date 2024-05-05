@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import roll_1 from "../../img/roll_1.jpg";
+---
+
+<section class="h-full md:min-h-screen bg-[--primary]" id="FirstSection">
+	<article
+		class="max-w-[1200px] flex flex-col md:flex-row justify-between items-center mx-auto">
+		<div class="flex items-start justify-around flex-col">
+			<h2
+				class="font-[--text1] text-[--secondary] text-6xl pb-10"
+				id="text">
+				Un nuevo concepto <br /> de comida japonesa
+			</h2>
+			<p
+				class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
+				id="text2">
+				Sibuya es sinónimo de la deliciosa sencillez del <strong
+					>Maki</strong
+				> más tradicional, de los bocados explosivos de <strong
+					>Nigiri</strong
+				> o de la innovación de los <strong>Flamed Rolls</strong>. Es la
+				colorida fiesta de los <strong>Uramaki</strong> o la sofisticación
+				de los <strong>Gunkan</strong>. Y, por eso, es el lugar
+				predilecto de los amantes del sushi y la parada ineludible de
+				aquellos que se están iniciando.
+			</p>
+		</div>
+		<Image
+			src={roll_1}
+			class="max-h-[600px] object-cover max-w-[530px]"
+			alt="roll_1 picture"
+		/>
+	</article>
+</section>
+
+<style>
+	#text {
+		font-family: var(--text2);
+	}
+	#tetx2 {
+		font-family: var(--text1);
+	}
+</style>

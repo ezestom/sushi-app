@@ -1,0 +1,24 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/sections/Hero.astro";
+import Header from "../components/Header.astro";
+import FirstSection from "../components/sections/FirstSection.astro";
+import SecondSection from "../components/sections/SecondSection.astro";
+import Slider from "../components/Slider.astro";
+import ThirdSection from "../components/sections/ThirdSection.astro";
+import FourthSection from "../components/sections/FourthSection.astro";
+---
+
+<Layout title="Sushi App">
+	<header>
+		<Header />
+		<Hero />
+	</header>
+	<main>
+		<FirstSection />
+		<SecondSection />
+		<Slider text="Sushi App" />
+		<ThirdSection />
+		<FourthSection />
+	</main>
+</Layout>

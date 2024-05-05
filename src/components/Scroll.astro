@@ -1,0 +1,115 @@
+<aside class="absolute bottom-10 md:left-52">
+	<div class="section-intro__scroll">
+		<a href="#FirstSection">
+			<div class="loading_line">
+				<div class="loading_line_inner loading_line_inner--1"></div>
+				acaa
+				<div class="loading_line_inner loading_line_inner--2"></div>
+			</div>
+		</a>
+	</div>
+</aside>
+
+<style>
+	.section-intro__scroll {
+		position: relative;
+		overflow: hidden;
+		rotate: 180deg;
+		z-index: 20;
+	}
+
+	.section-intro__scroll a {
+		opacity: 50;
+		width: 2px;
+		height: 100px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+	}
+
+	/* Capa de fondo */
+	.section-intro__scroll::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: var(--secondary);
+		opacity: 10%;
+		z-index: 3;
+	}
+
+	.section-intro__scroll a .loading_line {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 0;
+		z-index: 4;
+		background-color: var(--secondary);
+		animation: loadingLine 2s ease 0s infinite;
+	}
+
+	@keyframes loadingLine {
+		0% {
+			height: 0;
+		}
+		70% {
+			height: 100%;
+		}
+		100% {
+			height: 100%;
+		}
+	}
+
+	/* Estilos adicionales para la barra interior */
+	.section-intro__scroll a .loading_line .loading_line_inner--1 {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 100%;
+		background: var(--primary);
+		opacity: 0.2;
+		animation: loadingLineInner1 2s ease 0s infinite;
+	}
+
+	.section-intro__scroll a .loading_line .loading_line_inner--2 {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		width: 2px;
+		height: 100%;
+		background-color: antiquewhite;
+		opacity: 1;
+		animation: loadingLineInner2 2s ease 0s infinite;
+	}
+
+	@keyframes loadingLineInner1 {
+		0% {
+			opacity: 0;
+		}
+		70% {
+			opacity: 0.2;
+		}
+		100% {
+			opacity: 0.2;
+		}
+	}
+
+	@keyframes loadingLineInner2 {
+		0% {
+			opacity: 1;
+		}
+		70% {
+			opacity: 1;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+</style>

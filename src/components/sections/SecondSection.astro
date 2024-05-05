@@ -1,0 +1,42 @@
+---
+import { Image } from "astro:assets";
+import sashimi from "../../img/sashimi.jpg";
+import osaka_roll from "../../img/osaka_roll.jpg";
+---
+
+<section class="h-full md:min-h-screen bg-[--primary]" id="FirstSection">
+	<article
+		class="max-w-[1200px] flex flex-col md:flex-row justify-between mx-auto">
+		<Image
+			src={sashimi}
+			class="h-[600px] object-cover max-w-[530px]"
+			alt="sashimi picture"
+		/>
+		<div class="flex flex-col justify-between">
+			<p
+				class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
+				id="text2">
+				En los <strong>restaurantes Sibuya</strong> encontrarás un nuevo
+				concepto de comida japonesa, donde tradición y originalidad se fusionan
+				para dar lugar a los platos más apetecibles de sushi y mucho más.
+			</p>
+			<p class="text-[--secondary]">
+				<strong>¡Descubre nuestro Urban Sushi Bar!</strong>
+			</p>
+			<Image
+				src={osaka_roll}
+				class="max-w-[530px] object-cover"
+				alt="osaka_roll picture"
+			/>
+		</div>
+	</article>
+</section>
+
+<style>
+	#text {
+		font-family: var(--text2);
+	}
+	#tetx2 {
+		font-family: var(--text1);
+	}
+</style>

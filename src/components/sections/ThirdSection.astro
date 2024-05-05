@@ -1,0 +1,64 @@
+---
+import { MenuSlider } from "../../components/MenuSlider/MenuSlider.jsx";
+---
+
+<section
+	class="h-full md:min-h-screen bg-[--primary] flex"
+	id="FirstSection relative">
+	<article
+		class="flex flex-col md:flex-row items-center max-w-[1200px] mx-auto my-auto">
+		<div class="flex items-start w-full flex-col">
+			<h2
+				class="font-[--text1] text-[--secondary] text-6xl pb-10 text-start"
+				id="text">
+				Conoce nuestra carta
+			</h2>
+			<p
+				class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
+				id="text2">
+				En Sibuya siempre encontrarás una opción que te sorprenderá, de
+				la mano de <strong>ingredientes de máxima calidad</strong>, como
+				atún, salmón, langostinos, aguacate, setas o verduras en
+				tempura. Con una <strong
+					>amplia carta que incluye medio centenar de tipos de sushi
+					diferentes</strong
+				>, cada comensal da con su comida favorita. Porque la hay para
+				los más atrevidos y los más tradicionales, para los más sanos y
+				para aquellos que prefieren un poco más de salsa.
+			</p>
+			<p
+				class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
+				id="text2">
+				Y si nos permites una pequeña recomendación… Atrévete con
+				nuestros <strong>increíbles Flamed Rolls</strong>, nuestra
+				experiencia en mayúsculas: <strong
+					>sushi flambeado frente a tu mesa que te dejará con la boca
+					abierta</strong
+				>.
+			</p>
+			<a
+				href="/nuestro-platos"
+				class="bg-[--secondary] mt-10 text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer gap-2 z-20">
+				Ver todos los platos</a
+			>
+		</div>
+
+		<div class="max-w-[50%] h-fit m-auto flex items-center relative">
+			<MenuSlider client:visible />
+			<a
+				href="/nuestros-platos"
+				class="absolute -top-20 -left-16 bg-[--secondary] mt-10 text-sm text-[--primary] rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer gap-2 z-20 text-center p-6 -rotate-12 hover:rotate-0">
+				Explora <br /> nuestros <br />platos
+			</a>
+		</div>
+	</article>
+</section>
+
+<style>
+	#text {
+		font-family: var(--text2);
+	}
+	#tetx2 {
+		font-family: var(--text1);
+	}
+</style>
