@@ -6,42 +6,44 @@ import ensalada_1 from "../../img/ensalada_1.jpeg";
 
 <section class="h-full md:min-h-screen bg-[--primary]" id="FirstSection">
 	<article
-		class="max-w-[1200px] flex flex-col md:flex-row justify-between mx-auto">
+		class="max-w-[1200px] flex flex-col-reverse md:flex-row justify-between mx-auto">
 		<Image
 			src={sendai}
-			class="h-[800px] object-cover max-w-[530px]"
+			class="h-[350px] md:h-[800px] w-full object-cover object-center max-w-[530px]"
 			alt="sendai picture"
 		/>
 		<div class="flex flex-col justify-between">
-			<h2
-				class="font-[--text1] text-[--secondary] text-6xl pb-0"
-				id="text">
-				Un nuevo concepto <br /> de comida japonesa
-			</h2>
-			<p
-				class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
-				id="text2">
-				Y no solo el sabor es importante. Para nosotros, el ambiente es
-				una parte fundamental de la experiencia. Queremos que te sientas
-				como en casa, por eso, nuestros locales cuentan con una
-				decoración tranquila y relajada, que invita a dejar los
-				problemas y preocupaciones en la puerta para disfrutar al máximo
-				con nuestra propuesta.
-			</p>
-			<p
-				class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
-				id="text2">
-				¡Encuentra tu Sibuya más cercano y disfruta de la comida
-				japonesa más innovadora!
-			</p>
-			<a
-				href="/menu"
-				class="bg-[--secondary] text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer w-fit gap-2 z-20">
-				Ver todos los platos</a
-			>
+			<div class="p-2 md:p-0 flex flex-col justify-between h-full">
+				<h2
+					class="font-[--text1] text-[--secondary] text-6xl pb-0"
+					id="text">
+					Un nuevo concepto <br /> de comida japonesa
+				</h2>
+				<p
+					class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
+					id="text2">
+					Y no solo el sabor es importante. Para nosotros, el ambiente
+					es una parte fundamental de la experiencia. Queremos que te
+					sientas como en casa, por eso, nuestros locales cuentan con
+					una decoración tranquila y relajada, que invita a dejar los
+					problemas y preocupaciones en la puerta para disfrutar al
+					máximo con nuestra propuesta.
+				</p>
+				<p
+					class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0"
+					id="text2">
+					¡Encuentra tu Sibuya más cercano y disfruta de la comida
+					japonesa más innovadora!
+				</p>
+				<a
+					href="/menu"
+					class="bg-[--secondary] text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer w-fit gap-2 z-20 mb-2 mdmb-0">
+					Ver todos los platos</a
+				>
+			</div>
 			<Image
 				src={ensalada_1}
-				class="max-w-[530px] object-cover"
+				class="max-h-[350px] md:max-h-[600px] w-full object-cover object-center max-w-[530px]"
 				alt="ensalada_1 picture"
 			/>
 		</div>

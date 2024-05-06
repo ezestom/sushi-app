@@ -5,7 +5,7 @@ import CursorFollow from "../components/CursorFollow.jsx";
 ---
 
 <header
-	class="bg-[--primary] h-[100px] p-6 max-w-full flex justify-between items-center">
+	class="bg-[--primary] h-[100px] p-6 max-w-full w-full flex justify-between items-center">
 	<div class="burger-icon flex flex-grow basis-0 z-20">
 		<label
 			class="burger bg-[--secondary] rounded-full transition fixed top-8"
@@ -14,7 +14,9 @@ import CursorFollow from "../components/CursorFollow.jsx";
 		</label>
 	</div>
 
-	<a href="" class="max-w-[150px] w-full z-20 fixed mx-auto left-0 right-0">
+	<a
+		href=""
+		class="max-w-[150px] hidden md:block w-full z-20 fixed mx-auto left-0 right-0">
 		<img src={logo.src} alt="logo icon" />
 	</a>
 
@@ -111,4 +113,21 @@ import CursorFollow from "../components/CursorFollow.jsx";
 		}
 	}
 	/* end burger btn styles */
+
+	@keyframes enhance-header {
+		to {
+			z-index: 100;
+			position: fixed;
+			width: 100%;
+			top: 0rem;
+			box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1);
+			background: rgba(0, 0, 0, 0.5);
+		}
+	}
+	header {
+		animation: enhance-header linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 150px;
+		width: 100%;
+	}
 </style>

@@ -8,10 +8,8 @@
 }
 .swiper-slide {
 	max-width: 500px;
+	width: 100%;
 }
 .swiper-pagination {
 	display: none;
-}
-
-@media (width < 1000px) {
 }

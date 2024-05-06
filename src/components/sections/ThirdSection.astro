@@ -3,13 +3,13 @@ import { MenuSlider } from "../../components/MenuSlider/MenuSlider.jsx";
 ---
 
 <section
-	class="h-full md:min-h-screen bg-[--primary] flex"
+	class="h-full md:min-h-screen bg-[--primary] flex items-center justify-center"
 	id="FirstSection relative">
 	<article
-		class="flex flex-col md:flex-row items-center max-w-[1200px] mx-auto my-auto">
-		<div class="flex items-start w-full flex-col">
+		class="flex flex-col md:flex-row items-center max-w-[1200px] mx-auto my-auto w-full  overflow-x-hidden md:overflow-x-visible mb-2 md:mb-auto">
+		<div class="flex items-start w-full flex-col p-2 md:p-0">
 			<h2
-				class="font-[--text1] text-[--secondary] text-6xl pb-10 text-start"
+				class="font-[--text1] text-[--secondary] text-5xl md:text-6xl pb-10"
 				id="text">
 				Conoce nuestra carta
 			</h2>
@@ -43,11 +43,12 @@ import { MenuSlider } from "../../components/MenuSlider/MenuSlider.jsx";
 			>
 		</div>
 
-		<div class="max-w-[50%] h-fit m-auto flex items-center relative">
+		<div
+			class="md:max-w-[50%] w-full h-fit m-auto flex items-center relative">
 			<MenuSlider client:visible />
 			<a
 				href="/nuestros-platos"
-				class="absolute -top-20 -left-16 bg-[--secondary] mt-10 text-sm text-[--primary] rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer gap-2 z-20 text-center p-6 -rotate-12 hover:rotate-0">
+				class="absolute -top-20 -left-16 bg-[--secondary] mt-10 text-sm text-[--primary] rounded-full transition hover:scale-105 items-center justify-center font-light cursor-pointer gap-2 z-20 text-center p-6 -rotate-12 hover:rotate-0 hidden md:flex">
 				Explora <br /> nuestros <br />platos
 			</a>
 		</div>

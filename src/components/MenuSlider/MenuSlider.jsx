@@ -25,7 +25,7 @@ export function MenuSlider() {
 					clickable: true,
 				}}
 				modules={[FreeMode, Pagination]}
-				className="mySwiper ">
+				className="mySwiper overflow-x-hidden w-full">
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
