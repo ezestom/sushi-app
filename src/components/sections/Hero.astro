@@ -5,9 +5,18 @@ import doDelivery from "../../icons/doDelivery.svg";
 import whatsapp from "../../icons/whatsapp.svg";
 import cookie from "../../icons/cookie.svg";
 import sushi from "../../icons/sushi.svg";
+import Header from "../Header.astro";
 ---
 
-<section class="h-full md:h-screen bg-[--primary] relative pt-44 md:pt-0">
+<script>
+	import "transition-style";
+</script>
+
+<section
+	class="h-full md:h-screen bg-[--primary] relative pt-44 md:pt-0"
+	transition-style="in:circle:bottom-left">
+	<Header href2="/navbar" />
+
 	<article class="flex items-center justify-center p-0 -mt-10">
 		<aside
 			class="w-full flex flex-col items-center justify-center relative z-10">
