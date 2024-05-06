@@ -1,0 +1,150 @@
+---
+import instagram from "../icons/instagram.svg";
+import instagram_1 from "../img/instagram_1.jpg";
+import instagram_2 from "../img/instagram_2.jpg";
+---
+
+<section
+	class="h-full md:h-screen w-full flex flex-col items-strech justify-center bg-[--primary]">
+	<div
+		class="flex justify-between max-w-[1200px] items-center w-full mx-auto">
+		<h2 class="font-[--text1] text-[--secondary] text-7xl pb-0" id="text">
+			Sibuya en instagram
+		</h2>
+		<div
+			class="font-light flex flex-col items-end text-xl text-[--secondary]">
+			<a class="flex items-center gap-2" target="_blank" href="#"
+				><img
+					class="max-w-10"
+					src={instagram.src}
+					alt=""
+				/>@sibuya_es</a
+			>
+			<span class="font-extralight opacity-75"
+				>Ya somos <strong>185mil </strong>seguidores</span
+			>
+		</div>
+	</div>
+	<article
+		class="text-6xl md:text-[12vw] overflow-hidden pt-20 w-full"
+		id="slider-component">
+		<aside>
+			<div class="slider-container-1">
+				<img
+					src={instagram_1.src}
+					alt="instagram picture"
+					class="max-w-[350px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-2">
+				<img
+					src={instagram_2.src}
+					alt="instagram picture"
+					class="max-w-[250px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-1">
+				<img
+					src={instagram_1.src}
+					alt="instagram picture"
+					class="max-w-[350px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-2">
+				<img
+					src={instagram_2.src}
+					alt="instagram picture"
+					class="max-w-[250px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-1">
+				<img
+					src={instagram_1.src}
+					alt="instagram picture"
+					class="max-w-[350px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-2">
+				<img
+					src={instagram_2.src}
+					alt="instagram picture"
+					class="max-w-[250px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-1">
+				<img
+					src={instagram_1.src}
+					alt="instagram picture"
+					class="max-w-[350px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-2">
+				<img
+					src={instagram_2.src}
+					alt="instagram picture"
+					class="max-w-[250px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-1">
+				<img
+					src={instagram_1.src}
+					alt="instagram picture"
+					class="max-w-[350px] aspect-square"
+				/>
+			</div>
+			<div class="slider-container-2">
+				<img
+					src={instagram_2.src}
+					alt="instagram picture"
+					class="max-w-[250px] aspect-square"
+				/>
+			</div>
+		</aside>
+	</article>
+</section>
+
+<script>
+	const slider = document.getElementById("slider-component");
+	let isPaused = false;
+
+	slider?.addEventListener("mouseenter", () => {
+		isPaused = true;
+		slider.style.animation = "paused";
+		console.log("paused");
+	});
+
+	slider?.addEventListener("mouseleave", () => {
+		isPaused = false;
+		slider.style.animationPlayState = "running";
+		console.log("running");
+	});
+</script>
+
+<style>
+	#text {
+		font-family: var(--text2);
+	}
+	#tetx2 {
+		font-family: var(--text1);
+	}
+	aside {
+		display: flex;
+		align-items: start;
+		justify-content: center;
+		width: 100%;
+		animation: slide 400s linear infinite;
+		gap: 2.5rem;
+	}
+	aside:has(:hover) {
+		animation-play-state: paused;
+	}
+
+	@keyframes slide {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(-500%);
+		}
+	}
+</style>

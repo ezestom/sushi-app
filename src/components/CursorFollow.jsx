@@ -53,8 +53,8 @@ const FollowMouse = () => {
 					pointerEvents: "none",
 					left: -25,
 					top: -25,
-					width: 100,
-					height: 100,
+					width: 125,
+					height: 125,
 					transform: `translate(${position.x}px, ${position.y}px)`,
 				}}
 			/>
