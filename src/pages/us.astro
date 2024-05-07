@@ -1,0 +1,143 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Scroll from "../components/Scroll.astro";
+import dragon from "../img/dragon.jpg";
+import veggie from "../img/veggie.jpg";
+import wok from "../img/wok.jpg";
+import { Image } from "astro:assets";
+import Banner from "../components/Banner.astro";
+import Team from "../components/Team.astro";
+import Instagram from "../components/Instagram.astro";
+import Footer from "../components/sections/Footer.astro";
+---
+
+<script>
+	import "transition-style";
+</script>
+
+<Layout title="Navbar">
+	<section
+		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full relative"
+		transition-style="in:circle:bottom-left">
+		<article id="article-one">
+			<Header href2="/navbar" />
+			<div class="flex items-center justify-center flex-col text-center">
+				<h2
+					class="font-[--text1] text-[--secondary] text-6xl md:text-8xl pb-0 flex items-center justify-center my-10">
+					Nosotros
+				</h2>
+				<p
+					class="font-light text-[--secondary] text-xl md:text-2xl max-w-[65ch] text-balance md:pb-0 mx-2">
+					Sabores, texturas, aromas, sensaciones… Sibuya busca ir más
+					allá de lo establecido por la gastronomía japonesa, creando
+					una experiencia única en la que se potencien todos tus
+					sentidos para hacerte apreciar hasta el más mínimo de los
+					detalles. Ven a conocer la experiencia Sibuya. Ven a sentir.
+				</p>
+			</div>
+		</article>
+		<Scroll href="#section2" />
+	</section>
+	<section class="bg-[--primary]">
+		<article
+			class="max-w-[1200px] h-full md:min-h-screen flex flex-col md:flex-row justify-between items-center mx-auto pt-12 md:pt-0">
+			<div class="flex items-start justify-around flex-col">
+				<h2
+					class="font-[--text1] text-[--secondary] text-5xl md:text-6xl pb-10 px-2 md:px-0"
+					id="text section2">
+					Pequeños detalles que nos <br /> hacen únicos
+				</h2>
+				<p
+					class="font-extralight text-[--secondary] text-sm max-w-[50ch] opacity-60 leading-7 pb-5 md:pb-0 px-2 md:px-0"
+					id="text2">
+					Vivimos en un constante proceso de inspiración, innovación y
+					creación de nuevas combinaciones de sabores con las materias
+					primas de mayor calidad para seducir incluso a aquellas
+					personas que se resisten al sushi, mientras nos convertimos
+					en los favoritos de los amantes de la comida japonesa.
+				</p>
+				<a
+					href="/menu"
+					class="bg-[--secondary] text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer w-fit gap-2 z-20 mx-2 md:mx-0 my-4">
+					Ver todos los platos</a
+				>
+			</div>
+			<Image
+				src={dragon}
+				class="h-[350px] md:h-[600px] w-full object-cover object-center max-w-[530px]"
+				alt="dragon picture"
+			/>
+		</article>
+		<article
+			class="flex max-w-[1200px] mx-auto flex-col md:flex-row items-center justify-between h-full md:min-h-screen">
+			<Image
+				src={veggie}
+				class="md:h-[500px] h-[350px] w-full md:w-[315px] object-cover object-center max-w-[530px]"
+				alt="dragon picture"
+			/>
+			<Image
+				src={wok}
+				class="h-[350px] md:h-[500px] w-full md:w-[800px] object-cover object-center"
+				alt="dragon picture"
+			/>
+		</article>
+		<article
+			class="flex max-w-[1200px] mx-auto flex-col md:flex-row items-start justify-center md:pl-72 h-full">
+			<div class="flex items-start justify-center pt-10 md:pt-0 flex-col">
+				<h2
+					class="font-[--text1] text-[--secondary] text-5xl md:text-6xl md:pb-10 px-2 md:px-0"
+					id="text">
+					Nuestros Restaurantes
+				</h2>
+				<p
+					class="font-extralight text-[--secondary] text-sm max-w-[75ch] opacity-60 leading-7 pb-5 md:pb-0 px-2 md:px-0"
+					id="text2">
+					La experiencia Sibuya comienza al entrar por la puerta de
+					cualquiera de nuestros restaurantes, gracias a un ecosistema
+					exclusivo pensado para transmitirte tranquilidad, placer y
+					felicidad junto a los tuyos, o contigo mismo, mientras
+					disfrutas al máximo de nuestra propuesta gastronómica. ¿Te
+					vienes?
+				</p>
+				<a
+					href="/stores"
+					class="bg-[--secondary] text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer w-fit gap-2 z-20 mx-2 md:mx-0 my-4">
+					Encuentra tu restautante</a
+				>
+			</div>
+		</article>
+		<Banner />
+		<aside
+			class="bg-[--primary] w-full h-full md:min-h-[40vh] md:mb-20 flex justify-center items-center">
+			<h2 class="text-[--secondary] text-5xl md:text-8xl">
+				El sushi para los que <br />
+				no les gusta el sushi
+			</h2>
+		</aside>
+		<Team />
+		<Instagram />
+		<Footer />
+	</section>
+
+	<style>
+		h2 {
+			font-family: var(--text2);
+		}
+		p {
+			font-family: var(--text1);
+		}
+		#article-one {
+			position: relative;
+			height: 90vh;
+			background-image: linear-gradient(
+					rgba(0, 0, 0, 0.5),
+					rgba(0, 0, 0, 0)
+				),
+				url("../img/bg-roll.jpg");
+			background-size: cover;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+	</style>
+</Layout>

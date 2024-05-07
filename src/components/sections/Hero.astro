@@ -13,7 +13,7 @@ import Header from "../Header.astro";
 </script>
 
 <section
-	class="h-full md:h-screen bg-[--primary] relative pt-44 md:pt-0"
+	class="h-full md:min-h-screen bg-[--primary] relative pt-44 md:pt-0"
 	transition-style="in:circle:bottom-left">
 	<Header href2="/navbar" />
 
@@ -51,7 +51,7 @@ import Header from "../Header.astro";
 		</aside>
 		<div
 			class="flex justify-between absolute bottom-20 w-full items-center">
-			<a class="px-6 max-w-28 z-20 fixed bottom-4" href="#"
+			<a class="px-6 max-w-24 z-20 fixed bottom-4" href="#"
 				><img src={cookie.src} alt="cookie icon" />
 			</a>
 			<a class="px-6 w-full z-20 relative hidden md:block" href="#">
@@ -70,7 +70,7 @@ import Header from "../Header.astro";
 				><img src={whatsapp.src} alt="whatsapp icon" /></a
 			>
 		</div>
-		<Scroll />
+		<Scroll href="#FirstSection" />
 	</article>
 
 	<style>

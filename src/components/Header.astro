@@ -10,7 +10,7 @@ const { href2 } = Astro.props;
 ---
 
 <header
-	class="bg-[--primary] h-[100px] p-6 max-w-full w-full flex justify-between items-center">
+	class=" h-[100px] p-6 max-w-full w-full flex justify-between items-center">
 	<StartButton href={href2} />
 
 	<a
@@ -32,13 +32,12 @@ const { href2 } = Astro.props;
 </header>
 
 <style>
-	@keyframes enhance-header {
+	/* @keyframes enhance-header {
 		to {
 			z-index: 100;
 			position: fixed;
 			width: 100%;
 			top: 0rem;
-			box-shadow: 0px 5px 50px -5px hsla(0, 0%, 100%, 0.1);
 			background: rgba(0, 0, 0, 0.5);
 		}
 	}
@@ -47,5 +46,5 @@ const { href2 } = Astro.props;
 		animation-timeline: scroll(root);
 		animation-range: 0 150px;
 		width: 100%;
-	}
+	} */
 </style>

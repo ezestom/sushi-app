@@ -1,0 +1,42 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MapComp from "../components/Map/MapComp";
+import Header from "../components/Header.astro";
+import Footer from "../components/sections/Footer.astro";
+---
+
+<script>
+	import "transition-style";
+</script>
+
+<Layout title="App Sushi Sucursales">
+	<section
+		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full relative"
+		transition-style="in:circle:bottom-left">
+		<Header href2="/navbar" />
+		<h2
+			class="font-[--text1] text-[--secondary] text-6xl md:text-8xl pb-0 flex items-center justify-center my-10">
+			App Sushi Sucursales
+		</h2>
+
+		<!-- <button class="subButton">Lo paso a buscar</button> -->
+
+		<MapComp client:load />
+		<Footer />
+	</section>
+</Layout>
+
+<style>
+	h2 {
+		font-family: var(--text2);
+	}
+	section {
+		position: relative;
+		height: 100vh;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+			url("../img/bg-sushi.jpg");
+		background-size: contain;
+		background-position: top;
+		background-repeat: no-repeat;
+	}
+</style>
