@@ -21,11 +21,11 @@ import Layout from "../layouts/Layout.astro";
 				<Image
 					src={nagasaki}
 					alt="image navbar"
-					class="w-full z-50 max-w-[300px] h-full md:h-[448px] object-cover object-center hidden md:block rounded-l-xl"
+					class="w-full z-50 max-w-[300px] h-full md:h-[448px] object-cover object-center hidden md:block rounded-l-lg"
 				/>
 				<div
 					class="scene z-50 text-2xl md:text-[1.75rem] flex flex-col items-start justify-between h-full flex-1 rounded-r-lg">
-					<span class="cube">
+					<span class="cube rounded-tr-lg">
 						<a href="/" class="side top rounded-tr-lg">Inicio</a>
 						<a href="/" class="side front rounded-tr-lg">Inicio</a>
 					</span>
@@ -37,7 +37,7 @@ import Layout from "../layouts/Layout.astro";
 						<a href="/us" class="side top">Nosotros</a>
 						<a href="/us" class="side front">Nosotros</a>
 					</span>
-					<span class="cube">
+					<span class="cube rounded-br-lg">
 						<a href="/contact" class="side top rounded-br-lg"
 							>Contacto</a
 						>
@@ -130,11 +130,7 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 
 	<style>
-		#navbar {
-			border: 1px solid #202020;
-			border-radius: 0.5rem;
-			filter: drop-shadow(0 0 0.25rem #000);
-		}
+
 		section {
 			position: relative;
 			height: 100vh;
