@@ -16,17 +16,18 @@ import Layout from "../layouts/Layout.astro";
 		<article>
 			<Header href2="/" />
 			<div
-				class="flex z-20 flex-col-reverse md:flex-row items-center justify-center max-w-[1200px] pt-16 mx-auto w-fit">
+				class="flex z-20 flex-col-reverse md:flex-row items-center justify-center max-w-[1200px] mt-16 mx-auto w-fit rounded-lg"
+				id="navbar">
 				<Image
 					src={nagasaki}
 					alt="image navbar"
-					class="w-full z-50 max-w-[300px] h-full md:h-[448px] object-cover object-center hidden md:block"
+					class="w-full z-50 max-w-[300px] h-full md:h-[448px] object-cover object-center hidden md:block rounded-l-xl"
 				/>
 				<div
-					class="scene z-50 text-2xl md:text-[1.75rem] flex flex-col items-start justify-between h-full flex-1">
+					class="scene z-50 text-2xl md:text-[1.75rem] flex flex-col items-start justify-between h-full flex-1 rounded-r-lg">
 					<span class="cube">
-						<a href="/" class="side top">Inicio</a>
-						<a href="/" class="side front">Inicio</a>
+						<a href="/" class="side top rounded-tr-lg">Inicio</a>
+						<a href="/" class="side front rounded-tr-lg">Inicio</a>
 					</span>
 					<span class="cube">
 						<a href="/stores" class="side top">Locales</a>
@@ -37,8 +38,12 @@ import Layout from "../layouts/Layout.astro";
 						<a href="/us" class="side front">Nosotros</a>
 					</span>
 					<span class="cube">
-						<a href="/contact" class="side top">Contacto</a>
-						<a href="/contact" class="side front">Contacto</a>
+						<a href="/contact" class="side top rounded-br-lg"
+							>Contacto</a
+						>
+						<a href="/contact" class="side front rounded-br-lg"
+							>Contacto</a
+						>
 					</span>
 				</div>
 			</div>
@@ -125,6 +130,11 @@ import Layout from "../layouts/Layout.astro";
 	</section>
 
 	<style>
+		#navbar {
+			border: 1px solid #202020;
+			border-radius: 0.5rem;
+			filter: drop-shadow(0 0 0.25rem #000);
+		}
 		section {
 			position: relative;
 			height: 100vh;
@@ -149,8 +159,6 @@ import Layout from "../layouts/Layout.astro";
 			height: 100%;
 			background: linear-gradient(to bottom, transparent, 75%, #292929);
 		}
-		.scene {
-		}
 
 		.cube {
 			color: var(--secondary);
@@ -161,7 +169,8 @@ import Layout from "../layouts/Layout.astro";
 			transform-origin: 100% 50%;
 			width: 10em;
 			height: 4em;
-			background-color: rgba(0, 0, 0, 1);
+			background-color: #292929;
+			border: 1px solid #202020;
 		}
 
 		.cube:hover {
@@ -178,6 +187,7 @@ import Layout from "../layouts/Layout.astro";
 			text-transform: uppercase;
 			padding-top: 1.5em;
 			font-weight: bold;
+			border: 1px solid #202020;
 		}
 
 		.top {
