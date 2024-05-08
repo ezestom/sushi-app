@@ -11,7 +11,7 @@ import Footer from "../components/sections/Footer.astro";
 
 <Layout title="App Sushi Sucursales">
 	<section
-		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full relative"
+		class="bg-[#292929] h-[70vh] md:min-h-[85vh]   w-full relative"
 		transition-style="in:circle:bottom-left">
 		<Header href2="/navbar" />
 		<h2
@@ -22,21 +22,12 @@ import Footer from "../components/sections/Footer.astro";
 		<!-- <button class="subButton">Lo paso a buscar</button> -->
 
 		<MapComp client:load />
-		<Footer />
 	</section>
+	<Footer />
 </Layout>
 
 <style>
 	h2 {
 		font-family: var(--text2);
-	}
-	section {
-		position: relative;
-		height: 100vh;
-		background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
-			url("../img/bg-sushi.jpg");
-		background-size: contain;
-		background-position: top;
-		background-repeat: no-repeat;
 	}
 </style>

@@ -8,7 +8,9 @@ import instagram_2 from "../img/instagram_2.jpg";
 	class="h-full md:h-screen w-full flex flex-col items-strech justify-center bg-[--primary]">
 	<div
 		class="flex justify-between max-w-[1200px] items-center w-full mx-auto">
-		<h2 class="font-[--text1] text-[--secondary] text-5xl px-2 md:px-0 md:text-7xl pb-0" id="text">
+		<h2
+			class="font-[--text1] text-[--secondary] text-5xl px-2 md:px-0 md:text-7xl pb-0"
+			id="text">
 			Sibuya en instagram
 		</h2>
 		<div
@@ -127,12 +129,21 @@ import instagram_2 from "../img/instagram_2.jpg";
 	#tetx2 {
 		font-family: var(--text1);
 	}
+	@media (max-width: 768px) {
+		aside {
+			animation: slide 100s linear infinite;
+		}
+	}
+	@media (min-width: 1024px) {
+		aside {
+			animation: slide 300s linear infinite;
+		}
+	}
 	aside {
 		display: flex;
 		align-items: start;
 		justify-content: center;
 		width: 100%;
-		animation: slide 400s linear infinite;
 		gap: 2.5rem;
 	}
 	aside:has(:hover) {

@@ -22,13 +22,14 @@ import Footer from "../components/sections/Footer.astro";
 		transition-style="in:circle:bottom-left">
 		<article id="article-one">
 			<Header href2="/navbar" />
-			<div class="flex items-center justify-center flex-col text-center">
+			<div
+				class="flex items-center justify-start flex-col text-center h-full">
 				<h2
 					class="font-[--text1] text-[--secondary] text-6xl md:text-8xl pb-0 flex items-center justify-center my-10">
 					Nosotros
 				</h2>
 				<p
-					class="font-light text-[--secondary] text-xl md:text-2xl max-w-[65ch] text-balance md:pb-0 mx-2">
+					class="font-light text-start md:text-center text-[--secondary] leading-8 md:leading-[2.5rem] md:text-xl max-w-[75ch] text-pretty md:pb-0 mx-4 brightness-110 ">
 					Sabores, texturas, aromas, sensaciones… Sibuya busca ir más
 					allá de lo establecido por la gastronomía japonesa, creando
 					una experiencia única en la que se potencien todos tus
@@ -138,6 +139,15 @@ import Footer from "../components/sections/Footer.astro";
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+		}
+		#article-one::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, transparent, 75%, #292929);
 		}
 	</style>
 </Layout>
