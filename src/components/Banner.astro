@@ -1,14 +1,15 @@
 ---
-import logo from "../img/amikasa-logo-sibuya.svg";
+import logo from "../img/logo_negro.png";
 import logoGoogle from "../img/google-play-logo.svg";
 import logoApple from "../img/app-store-logo.svg";
 ---
 
 <section class="bg-[--primary] w-full h-full md:min-h-[30vh] py-20 md:py-40">
 	<article
-		class="flex max-w-[1436px]  items-center justify-between bg-[--secondary] px-2 md:px-24 rounded-3xl h-full mx-4 md:mx-auto min-h-[240px] py-10">
+		class="flex max-w-[1436px] items-center justify-between bg-[--secondary] px-2 md:px-24 rounded-3xl h-full mx-4 md:mx-auto min-h-[240px] py-10">
 		<div><img src={logo.src} class="w-40" alt="" /></div>
-		<div class="font-light text-xs md:text-base text-center md:text-start px-2 md:px-0">
+		<div
+			class="font-light text-xs md:text-base text-center md:text-start px-2 md:px-0">
 			<p>
 				También puedes disfrutar de la experiencia Sushi App desde casa.
 				Coge tu móvil,<br />
@@ -18,8 +19,12 @@ import logoApple from "../img/app-store-logo.svg";
 			</p>
 		</div>
 		<div class="">
-			<button class=" border border-[--primary] px-4 py-2  my-1 rounded-xl"> <img class="w-24" src={logoGoogle.src} alt="app logo"> </button>
-			<button class=" border border-[--primary] px-4 py-2  my-1 rounded-xl"> <img class="w-24" src={logoApple.src} alt="app logo"> </button>
+			<button class="border border-[--primary] px-4 py-2 my-1 rounded-xl">
+				<img class="w-24" src={logoGoogle.src} alt="app logo" />
+			</button>
+			<button class="border border-[--primary] px-4 py-2 my-1 rounded-xl">
+				<img class="w-24" src={logoApple.src} alt="app logo" />
+			</button>
 		</div>
 	</article>
 </section>
