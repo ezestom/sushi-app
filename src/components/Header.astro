@@ -1,5 +1,5 @@
 ---
-import logo from "../img/logo_blanco.png";
+import logo from "../img/logo_beishe_logo.png";
 import sushi from "../icons/sushi.svg";
 import CursorFollow from "../components/CursorFollow.jsx";
 import StartButton from "../components/StartButton.astro";
@@ -10,12 +10,12 @@ const { href2 } = Astro.props;
 ---
 
 <header
-	class=" h-[100px] p-6 max-w-full w-full flex justify-between items-center">
+	class=" h-[100px] p-6 max-w-full w-full flex justify-between items-center z-100">
 	<StartButton href={href2} />
 
 	<a
 		href="/"
-		class="max-w-[200px] hidden md:block w-full z-20 fixed mx-auto left-0 right-0">
+		class="max-w-[250px] hidden md:block w-full z-20 fixed mx-auto left-0 right-0">
 		<img src={logo.src} alt="logo icon" />
 	</a>
 
