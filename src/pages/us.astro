@@ -16,9 +16,9 @@ import Footer from "../components/sections/Footer.astro";
 	import "transition-style";
 </script>
 
-<Layout title="Navbar">
+<Layout title="Nosotros">
 	<section
-		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full relative"
+		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full relative z-10"
 		transition-style="in:circle:center">
 		<article id="article-one">
 			<Header href2="/navbar" />
@@ -120,9 +120,23 @@ import Footer from "../components/sections/Footer.astro";
 		<Team />
 		<Instagram />
 		<Footer />
+		<div id="bg-image"></div>
 	</section>
 
 	<style>
+		#bg-image {
+			position: fixed;
+			background-image: url("../img/logo_beishe_logo.png");
+			background-size: 75%;
+			background-repeat: no-repeat;
+			background-position: center;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			opacity: 0.02;
+			z-index: 0;
+		}
 		h2 {
 			font-family: var(--text2);
 		}
@@ -130,6 +144,7 @@ import Footer from "../components/sections/Footer.astro";
 			font-family: var(--text1);
 		}
 		#article-one {
+			z-index: 2;
 			position: relative;
 			height: 90vh;
 			background-image: linear-gradient(
