@@ -6,18 +6,20 @@ import whatsapp from "../../icons/whatsapp.svg";
 import cookie from "../../icons/cookie.svg";
 import sushi from "../../icons/sushi.svg";
 import Header from "../Header.astro";
+import { Image } from "astro:assets";
+import bgLogo from "../../img/logo_negro_logo.png";
 ---
 
 <script>
 	import "transition-style";
 </script>
 
-<section
-	class="h-full md:min-h-screen bg-[--primary] relative pt-44 md:pt-0"
-	transition-style="in:circle:bottom-left">
+<section class="h-full md:min-h-screen bg-[--primary] relative pt-44 md:pt-0 z-10">
 	<Header href2="/navbar" />
 
-	<article class="flex items-center justify-center p-0 -mt-10">
+	<article
+		class="flex items-center justify-center p-0 -mt-10"
+		transition-style="in:circle:center">
 		<aside
 			class="w-full flex flex-col items-center justify-center relative z-10">
 			<div
@@ -72,18 +74,19 @@ import Header from "../Header.astro";
 		</div>
 		<Scroll href="#FirstSection" />
 	</article>
-
-	<style>
-		#text {
-			font-family: var(--text2);
-		}
-		#text2 {
-			font-family: var(--text1);
-		}
-		@media (max-width: 1600px) {
-			aside {
-				margin-top: -4rem;
-			}
-		}
-	</style>
 </section>
+
+<style>
+
+	#text {
+		font-family: var(--text2);
+	}
+	#text2 {
+		font-family: var(--text1);
+	}
+	@media (max-width: 1600px) {
+		aside {
+			margin-top: -4rem;
+		}
+	}
+</style>
