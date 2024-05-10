@@ -14,7 +14,8 @@ import bgLogo from "../../img/logo_negro_logo.png";
 	import "transition-style";
 </script>
 
-<section class="h-full md:min-h-screen bg-[--primary] relative pt-44 md:pt-0 z-10">
+<section
+	class="h-full md:min-h-screen bg-[--primary] relative pt-44 md:pt-0 z-10">
 	<Header href2="/navbar" />
 
 	<article
@@ -51,33 +52,34 @@ import bgLogo from "../../img/logo_negro_logo.png";
 				</p>
 			</div>
 		</aside>
-		<div
-			class="flex justify-between absolute bottom-20 w-full items-center">
-			<a class="px-6 max-w-24 z-20 fixed bottom-4" href="#"
-				><img src={cookie.src} alt="cookie icon" />
-			</a>
-			<a class="px-6 w-full z-20 relative hidden md:block" href="#">
-				<img
-					src={doDelivery.src}
-					alt="delivery icon"
-					class="absolute animate-[spin_15s_ease-in-out_infinite] w-28 m-auto top-0 right-0 left-0 bottom-0"
-				/>
-				<img
-					src={sushi.src}
-					alt="sushi icon"
-					class="absolute top-0 w-16 bg-[--secondary] rounded-full p-1 m-auto right-0 left-0 bottom-0"
-				/>
-			</a>
-			<a class="px-6 max-w-24 z-20 fixed right-0 bottom-4" href="#"
-				><img src={whatsapp.src} alt="whatsapp icon" /></a
-			>
-		</div>
-		<Scroll href="#FirstSection" />
 	</article>
+	<div class="flex justify-between absolute bottom-20 w-full items-center">
+		<a
+			class="px-6 hover:scale-105 transition max-w-24 fixed bottom-4 z-100"
+			href="#"
+			><img src={cookie.src} alt="cookie icon" />
+		</a>
+		<a class="px-6 w-full z-20 relative hidden md:block" href="#">
+			<img
+				src={doDelivery.src}
+				alt="delivery icon"
+				class="absolute animate-[spin_15s_ease-in-out_infinite] w-28 m-auto top-0 right-0 left-0 bottom-0"
+			/>
+			<img
+				src={sushi.src}
+				alt="sushi icon"
+				class="absolute top-0 w-16 bg-[--secondary] rounded-full p-1 m-auto right-0 left-0 bottom-0"
+			/>
+		</a>
+		<a
+			class="px-6 hover:scale-105 transition max-w-24 z-50 fixed right-0 bottom-4"
+			href="#"><img src={whatsapp.src} alt="whatsapp icon" /></a
+		>
+	</div>
+	<Scroll href="#FirstSection" />
 </section>
 
 <style>
-
 	#text {
 		font-family: var(--text2);
 	}
