@@ -53,14 +53,14 @@ const FollowMouse = () => {
 					pointerEvents: "none",
 					left: -25,
 					top: -25,
-					width: 125,
-					height: 125,
+					width: 150,
+					height: 150,
 					transform: `translate(${position.x}px, ${position.y}px)`,
 				}}
 			/>
 			<button
 				onClick={() => setEnabled(!enabled)}
-				className="bg-[#e6dcc9]  text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer gap-1 ">
+				className="bg-[#e6dcc9]  text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105  items-center justify-center font-light cursor-pointer gap-1 hidden md:flex ">
 				{enabled ? "Off" : "On"}
 				<img src={pointer.src} className="max-w-6" alt="pointer icon" />
 			</button>

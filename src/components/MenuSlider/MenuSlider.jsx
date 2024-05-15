@@ -3,6 +3,13 @@ import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "./MenuSlider.css";
 import img1 from "../../img/nagasaki.jpg";
+import img2 from "../../img/niguiri.jpg";
+import img3 from "../../img/wok.jpg";
+import img4 from "../../img/veggie.jpg";
+import img5 from "../../img/wrap.jpg";
+import img6 from "../../img/tuna.jpg";
+import img7 from "../../img/poke.jpeg";
+import img8 from "../../img/red.jpg";
 
 // Import Swiper styles
 import "swiper/css";
@@ -36,42 +43,49 @@ export function MenuSlider() {
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
-						src={img1.src}
+						src={img2.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
-						src={img1.src}
+						src={img3.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
-						src={img1.src}
+						src={img4.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
-						src={img1.src}
+						src={img5.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
-						src={img1.src}
+						src={img6.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
 						className="hover:scale-105 transition object-contain w-full h-full"
-						src={img1.src}
+						src={img7.src}
+						alt="image"
+					/>
+				</SwiperSlide>
+				<SwiperSlide>
+					<img
+						className="hover:scale-105 transition object-contain w-full h-full"
+						src={img8.src}
 						alt="image"
 					/>
 				</SwiperSlide>

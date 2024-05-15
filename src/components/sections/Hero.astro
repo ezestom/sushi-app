@@ -1,21 +1,18 @@
 ---
-import presentation from "../../videos/presentation.mp4";
+import presentation from "../../videos/presentation2.mp4";
 import Scroll from "../Scroll.astro";
 import doDelivery from "../../icons/doDelivery.svg";
 import whatsapp from "../../icons/whatsapp.svg";
 import cookie from "../../icons/cookie.svg";
 import sushi from "../../icons/sushi.svg";
 import Header from "../Header.astro";
-import { Image } from "astro:assets";
-import bgLogo from "../../img/logo_negro_logo.png";
 ---
 
 <script>
 	import "transition-style";
 </script>
 
-<section
-	class="h-full md:min-h-screen bg-[--primary] relative pt-44 md:pt-0 z-10">
+<section class="min-h-screen bg-[--primary] relative pt-32 md:pt-0 z-10">
 	<Header href2="/navbar" />
 
 	<article
@@ -24,31 +21,32 @@ import bgLogo from "../../img/logo_negro_logo.png";
 		<aside
 			class="w-full flex flex-col items-center justify-center relative z-10">
 			<div
-				class="md:-translate-x-40 md:translate-y-20 flex flex-col items-start text-start text-[--secondary] mx-auto w-fit">
+				class="md:-translate-x-60 md:translate-y-20 flex flex-col items-start text-start text-[--secondary] mx-auto w-fit">
 				<span
 					class="text-base pb-6 uppercase text-start font-extralight opacity-25"
 					id="text2">
 					En Sushi App
 				</span>
 				<p
-					class="text-5xl md:text-[100px] -mt-8 font-[--text1]"
+					class="text-5xl md:text-[4vw] -mt-4 font-[--text1]"
 					id="text">
-					Disfruta del inesperado
+					La opción ideal <br /> para cada momento
 				</p>
 			</div>
-			<picture class="-z-10 mt-4">
+			<picture
+				class="-z-10 flex overflow-hidden aspect-square items-center justify-center md:-translate-y-12">
 				<video
 					muted
 					loop
 					autoplay
 					src={presentation}
-					class="max-w-[720px] w-full brightness-125">
+					class="w-full max-w-[530px] opacity-60">
 				</video>
 			</picture>
 			<div id="text" class="pt-12 md:pt-0">
 				<p
-					class="text-5xl md:text-[100px] -mt-6 font-[--text1] text-[--secondary] md:-translate-y-10 md:translate-x-72">
-					Placer del sushi
+					class="text-5xl md:text-[4vw] -mt-24 font-[--text1] text-[--secondary] md:-translate-y-10 md:translate-x-72">
+					Sushi, Pokes, Woks,<br /> Wraps y mucho más!
 				</p>
 			</div>
 		</aside>
