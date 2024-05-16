@@ -46,4 +46,24 @@ import { MenuSlider } from "../../components/MenuSlider/MenuSlider.jsx";
 	#tetx2 {
 		font-family: var(--text1);
 	}
+	img {
+		/* background: black; */
+		animation: fade linear both;
+		animation-timeline: scroll(root);
+		animation-range: 0 500px;
+	}
+	@media (width > 800px) {
+		@keyframes fade {
+			from {
+				scale: 0.5;
+				transform: translateY(300px);
+				opacity: 0.5;
+			}
+			to {
+				scale: 1;
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
 </style>

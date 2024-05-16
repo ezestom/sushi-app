@@ -51,6 +51,25 @@ import ensalada_1 from "../../img/ensalada_1.jpeg";
 </section>
 
 <style>
+	img {
+		animation: fade linear both;
+		animation-timeline: view();
+		animation-range: entry 20% cover 30%;
+	}
+	@media (width > 800px) {
+		@keyframes fade {
+			from {
+				scale: 0.75;
+				transform: translateY(300px);
+				opacity: 0.5;
+			}
+			to {
+				scale: 1;
+				transform: translateY(0);
+				opacity: 1;
+			}
+		}
+	}
 	#text {
 		font-family: var(--text2);
 	}
