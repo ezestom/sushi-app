@@ -43,6 +43,7 @@ const FollowMouse = () => {
 	return (
 		<>
 			<div
+				className="hidden md:flex  "
 				style={{
 					position: "fixed",
 					backgroundColor: "#CCBB9B",
@@ -53,8 +54,8 @@ const FollowMouse = () => {
 					pointerEvents: "none",
 					left: -25,
 					top: -25,
-					width: 150,
-					height: 150,
+					width: 200,
+					height: 200,
 					transform: `translate(${position.x}px, ${position.y}px)`,
 				}}
 			/>
