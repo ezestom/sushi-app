@@ -62,7 +62,7 @@ const FollowMouse = () => {
 			<button
 				onClick={() => setEnabled(!enabled)}
 				className="bg-[#e6dcc9]  text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105  items-center justify-center font-light cursor-pointer gap-1 hidden md:flex ">
-				{enabled ? "Off" : "On"}
+				{enabled ? "On" : "Off"}
 				<img src={pointer.src} className="max-w-6" alt="pointer icon" />
 			</button>
 		</>
