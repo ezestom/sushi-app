@@ -11,15 +11,14 @@ import Layout from "../layouts/Layout.astro";
 
 <Layout title="Navbar">
 	<section
-		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full flex flex-col items-center justify-center"
-		>
+		class="bg-[#292929] min-h-screen h-full md:min-h-screen w-full flex flex-col items-center justify-center">
 		<article>
 			<Header href2="/" />
 			<div
 				class="flex z-20 flex-col-reverse md:flex-row items-center justify-center max-w-[1200px] mt-16 mx-auto w-fit rounded-lg"
 				id="navbar">
-				<div 
-					class="w-full  z-50 h-full md:h-[448px] object-cover object-center flex items-center justify-center backdrop-blur-sm bg-[#292929]">
+				<div
+					class="w-full z-50 h-full md:h-[448px] object-cover object-center flex items-center justify-center backdrop-blur-sm bg-[#292929] box">
 					<Image
 						src={logo}
 						alt="image navbar"
@@ -141,7 +140,7 @@ import Layout from "../layouts/Layout.astro";
 				height: 100vh;
 				background-position: center;
 				background-repeat: no-repeat;
-				background-image: url("../img/image_hd_2_op.webp");
+				/* background-image: url("../img/image_hd_2_op.webp"); */
 			}
 			article::before {
 				content: "";
@@ -157,7 +156,9 @@ import Layout from "../layouts/Layout.astro";
 					#292929
 				);
 			}
-
+			.box {
+				box-shadow: 0 4px 6px 0 hsla(45, 30%, 90%, 0.2);
+			}
 			.cube {
 				color: var(--secondary);
 				cursor: pointer;
