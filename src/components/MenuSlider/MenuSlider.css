@@ -1,16 +1,16 @@
 .swiper {
-	width: 100%;
+	/* width: 100%;
 	margin: 0 auto;
-	height: 100%;
+	height: 100%; */
+	max-width: 600px;
+	width: 100%;
 }
 
 .swiper-wrapper {
 	cursor: grab;
+	padding: 0.25rem;
 }
-.swiper-slide {
-	max-width: 500px;
-	width: 100%;
-}
+
 .swiper-pagination {
 	display: none;
 }

@@ -46,11 +46,11 @@ const FollowMouse = () => {
 				className="hidden md:flex  "
 				style={{
 					position: "fixed",
-					backgroundColor: "#CCBB9B",
+					backgroundColor: "#abd58a",
 					filter: "blur(15px)", // Ajusta el valor de blur según desees
 					boxShadow: "0 0 20px 20px rgba(204, 187, 155, 0.5)", // Cambia el color y la opacidad según desees
 					borderRadius: "50%",
-					opacity: 0.3,
+					opacity: 0.2,
 					pointerEvents: "none",
 					left: -25,
 					top: -25,
@@ -61,7 +61,7 @@ const FollowMouse = () => {
 			/>
 			<button
 				onClick={() => setEnabled(!enabled)}
-				className="bg-[#e6dcc9]  text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105  items-center justify-center font-light cursor-pointer gap-1 hidden md:flex ">
+				className="bg-[--secondary]  text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105  items-center justify-center font-light cursor-pointer gap-1 hidden md:flex ">
 				{enabled ? "On" : "Off"}
 				<img src={pointer.src} className="max-w-6" alt="pointer icon" />
 			</button>

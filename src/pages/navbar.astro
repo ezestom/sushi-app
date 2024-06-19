@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 import Header from "../components/Header.astro";
-import logo from "../img/logo_beishe_logo.png";
+import logo from "../img/logo_verde_logo.png";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -15,15 +15,17 @@ import Layout from "../layouts/Layout.astro";
 		<article>
 			<Header href2="/" />
 			<div
-				class="flex z-20 flex-col-reverse md:flex-row items-center justify-center max-w-[1200px] mt-16 mx-auto w-fit rounded-lg"
+				class="flex z-20 flex-col-reverse  items-center justify-center max-w-[1200px] mt-12 mx-auto w-fit rounded-xl overflow-hidden "
 				id="navbar">
 				<div
-					class="w-full z-50 h-full md:h-[448px] object-cover object-center flex items-center justify-center backdrop-blur-sm bg-[#292929] box">
-					<Image
-						src={logo}
-						alt="image navbar"
-						class="max-w-64 px-6 hidden md:block"
-					/>
+					class="w-full rounded-xl z-50 h-full md:h-[450px] object-cover object-center flex items-center justify-center backdrop-blur-sm bg-[#292929] box">
+					<div class="subbox relative">
+						<Image
+							src={logo}
+							alt="image navbar"
+							class="max-w-64 px-6 hidden md:block  pt-2"
+						/>
+					</div>
 					<div
 						class="scene z-50 text-2xl md:text-[1.75rem] flex flex-col items-start justify-between h-full flex-1 rounded-r-lg">
 						<span class="cube">
@@ -125,77 +127,78 @@ import Layout from "../layouts/Layout.astro";
 				</div>
 			</div>
 		</article>
-
-		<style>
-			section {
-				position: relative;
-				height: 100vh;
-			}
-			article {
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-size: cover;
-				width: 100%;
-				height: 100vh;
-				background-position: center;
-				background-repeat: no-repeat;
-				/* background-image: url("../img/image_hd_2_op.webp"); */
-			}
-			article::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				background: linear-gradient(
-					to bottom,
-					transparent,
-					75%,
-					#292929
-				);
-			}
-			.box {
-				box-shadow: 0 4px 6px 0 hsla(45, 30%, 90%, 0.2);
-			}
-			.cube {
-				color: var(--secondary);
-				cursor: pointer;
-				font-family: "Roboto", sans-serif;
-				transition: all 0.85s cubic-bezier(0.17, 0.67, 0.14, 0.93);
-				transform-style: preserve-3d;
-				transform-origin: 100% 50%;
-				width: 10em;
-				height: 4em;
-				background-color: #292929;
-			}
-
-			.cube:hover {
-				transform: rotateX(-90deg);
-			}
-
-			.side {
-				box-sizing: border-box;
-				position: absolute;
-				display: inline-block;
-				height: 4em;
-				width: 10em;
-				text-align: center;
-				text-transform: uppercase;
-				padding-top: 1.5em;
-				font-weight: bold;
-			}
-
-			.top {
-				background: var(--secondary);
-				color: #222229;
-				transform: rotateX(90deg) translate3d(0, 0, 2em);
-			}
-
-			.front {
-				transform: translate3d(0, 0, 2em);
-			}
-		</style>
 	</section>
 </Layout>
+
+<style>
+	.subbox {
+		background-image: url("../img/tateti.jpg");
+		background-size: cover;
+		background-position: center;
+		height: 100%;
+		width: 100%;
+		position: relative
+	}
+	section {
+		position: relative;
+		height: 100vh;
+	}
+	article {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-size: cover;
+		width: 100%;
+		height: 100vh;
+		background-position: center;
+		background-repeat: no-repeat;
+		/* background-image: url("../img/image_hd_2_op.webp"); */
+	}
+	article::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(to bottom, transparent, 75%, #292929);
+	}
+
+	.cube {
+		color: var(--secondary);
+		cursor: pointer;
+		font-family: "Roboto", sans-serif;
+		transition: all 0.85s cubic-bezier(0.17, 0.67, 0.14, 0.93);
+		transform-style: preserve-3d;
+		transform-origin: 100% 50%;
+		width: 10em;
+		height: 4em;
+		background-color: #202020;
+	}
+
+	.cube:hover {
+		transform: rotateX(-90deg);
+	}
+
+	.side {
+		box-sizing: border-box;
+		position: absolute;
+		display: inline-block;
+		height: 4em;
+		width: 10em;
+		text-align: center;
+		text-transform: uppercase;
+		padding-top: 1.5em;
+		font-weight: bold;
+	}
+
+	.top {
+		background: var(--secondary);
+		color: #222229;
+		transform: rotateX(90deg) translate3d(0, 0, 2em);
+	}
+
+	.front {
+		transform: translate3d(0, 0, 2em);
+	}
+</style>

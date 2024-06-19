@@ -21,9 +21,9 @@ import Header from "../Header.astro";
 		<aside
 			class="w-full flex flex-col items-center justify-center relative z-10">
 			<div
-				class="md:-translate-x-60 md:translate-y-20 flex flex-col items-start text-start text-[--secondary] mx-auto w-fit">
+				class="md:-translate-x-60 md:translate-y-20 flex flex-col items-start text-start text-[#abd58a] mx-auto w-fit">
 				<span
-					class="text-base pb-6 uppercase text-start font-extralight opacity-25"
+					class="text-base pb-6 uppercase text-start font-extralight"
 					id="text2">
 					En Sushi App
 				</span>
@@ -34,30 +34,41 @@ import Header from "../Header.astro";
 				</p>
 			</div>
 			<picture
-				class="-z-10 flex overflow-hidden aspect-square items-center justify-center md:-translate-y-12">
+				class="-z-10 flex overflow-hidden aspect-square items-center justify-center md:-translate-y-12 md:rounded-xl relative">
 				<video
+					autoplay
+					id="video1"
 					muted
 					loop
-					autoplay
 					src={presentation}
-					class="w-full max-w-[530px] opacity-70">
+					class="w-full max-w-[530px] opacity-75">
+				</video>
+				<video
+					autoplay
+					id="video2"
+					muted
+					loop
+					src={presentation}
+					class="video2 absolute">
 				</video>
 			</picture>
 			<div id="text" class="pt-12 md:pt-0">
 				<p
-					class="text-5xl md:text-[4vw] -mt-24 font-[--text1] text-[--secondary] md:-translate-y-10 md:translate-x-72">
+					class="text-5xl md:text-[4vw] -mt-24 font-[--text1] text-[#abd58a] md:-translate-y-10 md:translate-x-72">
 					Sushi, Pokes, Woks,<br /> Wraps y mucho más!
 				</p>
 			</div>
 		</aside>
 	</article>
 	<div class="flex justify-between absolute bottom-20 w-full items-center">
-		<a
+		<!-- <a
 			class="px-6 hover:scale-105 transition max-w-24 fixed bottom-4 z-100"
 			href="#"
 			><img src={cookie.src} alt="cookie icon" />
-		</a>
-		<a class="px-6 w-full z-20 relative hidden md:block" href="#">
+		</a> -->
+		<a
+			class="px-6 w-full z-20 relative hidden md:block"
+			href="https://sushiapp.habitueonline.com/menu">
 			<img
 				src={doDelivery.src}
 				alt="delivery icon"
@@ -75,10 +86,50 @@ import Header from "../Header.astro";
 			target="_blank"><img src={whatsapp.src} alt="whatsapp icon" /></a
 		>
 	</div>
-	<Scroll href="#FirstSection" />
+	<!-- <Scroll href="#FirstSection" /> -->
 </section>
 
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+		var video1 = document.getElementById("video1") as HTMLVideoElement;
+		var video2 = document.getElementById("video2") as HTMLVideoElement;
+
+		if (video1 && video1.paused) {
+			video1.play().catch(function (error: any) {
+				console.log("Video 1 play failed:", error);
+			});
+		}
+
+		if (video2 && video2.paused) {
+			video2.play().catch(function (error: any) {
+				console.log("Video 2 play failed:", error);
+			});
+		}
+
+		// Optionally, add an event listener for visibility change
+		document.addEventListener("visibilitychange", function () {
+			if (document.visibilityState === "visible") {
+				if (video1 && video1.paused) {
+					video1.play().catch(function (error: any) {
+						console.log("Video 1 play failed:", error);
+					});
+				}
+				if (video2 && video2.paused) {
+					video2.play().catch(function (error: any) {
+						console.log("Video 2 play failed:", error);
+					});
+				}
+			}
+		});
+	});
+</script>
+
 <style>
+	.video2 {
+		filter: contrast(150%);
+		position: absolute;
+		z-index: -1;
+	}
 	#text {
 		font-family: var(--text2);
 	}

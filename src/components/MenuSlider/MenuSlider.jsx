@@ -27,120 +27,120 @@ export function MenuSlider() {
 			<Swiper
 				slidesPerView={1}
 				spaceBetween={25}
-				freeMode={true}
+				// freeMode={true}
 				pagination={{
 					clickable: true,
 				}}
-				modules={[FreeMode, Pagination]}
-				className="mySwiper overflow-x-hidden w-full">
+				modules={[ Pagination]}
+				className="mySwiper overflow-x-hidden w-auto">
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img1.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img2.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img3.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img4.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img5.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img6.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img7.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img8.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img1.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img2.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img3.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img4.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img5.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img6.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img7.src}
 						alt="image"
 					/>
 				</SwiperSlide>
 				<SwiperSlide>
 					<img
-						className="hover:scale-105 transition object-cover w-full h-full"
+						className="rounded-xl transition object-cover w-full  h-full"
 						src={img8.src}
 						alt="image"
 					/>

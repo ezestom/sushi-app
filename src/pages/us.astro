@@ -68,7 +68,7 @@ import Footer from "../components/sections/Footer.astro";
 			</div>
 			<Image
 				src={dragon}
-				class="h-[350px] md:h-[600px] w-full object-cover object-center max-w-[530px]"
+				class="h-[350px] md:rounded-xl md:h-[600px] w-full object-cover object-center max-w-[530px]"
 				alt="dragon picture"
 			/>
 		</article>
@@ -76,12 +76,12 @@ import Footer from "../components/sections/Footer.astro";
 			class="flex max-w-[1200px] mx-auto flex-col md:flex-row items-center justify-between h-full md:py-20">
 			<Image
 				src={veggie}
-				class="md:h-[500px] h-[350px] w-full md:w-[315px] object-cover object-center max-w-[530px]"
+				class="md:h-[500px] md:rounded-xl h-[350px] w-full md:w-[315px] object-cover object-center max-w-[530px]"
 				alt="dragon picture"
 			/>
 			<Image
 				src={wok}
-				class="h-[350px] md:h-[500px] w-full md:w-[800px] object-cover object-center"
+				class="h-[350px] md:rounded-lg md:h-[500px] w-full md:w-[800px] object-cover object-center"
 				alt="dragon picture"
 			/>
 		</article>
@@ -164,7 +164,7 @@ import Footer from "../components/sections/Footer.astro";
 			left: 0;
 			width: 100%;
 			height: 100%;
-			background: linear-gradient(to bottom, transparent, 75%, #292929);
+			background: linear-gradient(to bottom, transparent, 50%, #292929);
 		}
 		img {
 			animation: fade linear both;
