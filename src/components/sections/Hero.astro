@@ -41,15 +41,7 @@ import Header from "../Header.astro";
 					muted
 					loop
 					src={presentation}
-					class="w-full max-w-[530px] opacity-75">
-				</video>
-				<video
-					autoplay
-					id="video2"
-					muted
-					loop
-					src={presentation}
-					class="video2 absolute">
+					class="w-full max-w-[530px] opacity-85">
 				</video>
 			</picture>
 			<div id="text" class="pt-12 md:pt-0">
@@ -91,32 +83,21 @@ import Header from "../Header.astro";
 
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
-		var video1 = document.getElementById("video1") as HTMLVideoElement;
-		var video2 = document.getElementById("video2") as HTMLVideoElement;
+		let video1 = document.getElementById("video1") as HTMLVideoElement;
 
-		if (video1 && video1.paused) {
-			video1.play().catch(function (error: any) {
+		// Reproduce el video cuando la página se carga
+		if (video1) {
+			video1.play().catch(function (error) {
 				console.log("Video 1 play failed:", error);
 			});
 		}
 
-		if (video2 && video2.paused) {
-			video2.play().catch(function (error: any) {
-				console.log("Video 2 play failed:", error);
-			});
-		}
-
-		// Optionally, add an event listener for visibility change
+		// Opcional: maneja el cambio de visibilidad de la pestaña
 		document.addEventListener("visibilitychange", function () {
 			if (document.visibilityState === "visible") {
 				if (video1 && video1.paused) {
-					video1.play().catch(function (error: any) {
+					video1.play().catch(function (error) {
 						console.log("Video 1 play failed:", error);
-					});
-				}
-				if (video2 && video2.paused) {
-					video2.play().catch(function (error: any) {
-						console.log("Video 2 play failed:", error);
 					});
 				}
 			}
@@ -125,10 +106,8 @@ import Header from "../Header.astro";
 </script>
 
 <style>
-	.video2 {
-		filter: contrast(150%);
-		position: absolute;
-		z-index: -1;
+	#video1 {
+		filter: contrast(125%);
 	}
 	#text {
 		font-family: var(--text2);
