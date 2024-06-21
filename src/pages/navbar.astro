@@ -15,7 +15,7 @@ import Layout from "../layouts/Layout.astro";
 		<article>
 			<Header href2="/" />
 			<div
-				class="flex z-20 flex-col-reverse  items-center justify-center max-w-[1200px] mt-12 mx-auto w-fit rounded-xl overflow-hidden "
+				class="flex z-20 flex-col-reverse items-center justify-center max-w-[1200px] mt-12 mx-auto w-fit rounded-xl overflow-hidden"
 				id="navbar">
 				<div
 					class="w-full rounded-xl z-50 h-full md:h-[450px] object-cover object-center flex items-center justify-center backdrop-blur-sm bg-[#292929] box">
@@ -23,7 +23,7 @@ import Layout from "../layouts/Layout.astro";
 						<Image
 							src={logo}
 							alt="image navbar"
-							class="max-w-64 px-6 hidden md:block  pt-2"
+							class="max-w-64 px-6 hidden md:block pt-2"
 						/>
 					</div>
 					<div
@@ -131,13 +131,23 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style>
+section {
+		z-index: 2;
+		position: relative;
+		height: 100vh;
+		background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, .75)),
+			url("../img/image_hd_6_op.webp");
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+	}
 	.subbox {
 		background-image: url("../img/tateti.jpg");
 		background-size: cover;
 		background-position: center;
 		height: 100%;
 		width: 100%;
-		position: relative
+		position: relative;
 	}
 	section {
 		position: relative;
