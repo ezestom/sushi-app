@@ -1,16 +1,13 @@
 ---
-import presentation from "../../videos/presentation2_op.mp4";
+import presentacionMp4 from "../../videos/presentation2_op.mp4";
 import Scroll from "../Scroll.astro";
 import doDelivery from "../../icons/doDelivery.svg";
 import whatsapp from "../../icons/whatsapp.svg";
 import cookie from "../../icons/cookie.svg";
 import sushi from "../../icons/sushi.svg";
 import Header from "../Header.astro";
+import poster from "../../img/roll_1.jpg";
 ---
-
-<script>
-	import "transition-style";
-</script>
 
 <section class="min-h-screen bg-[--primary] relative pt-32 md:pt-0 z-10">
 	<Header href2="/navbar" />
@@ -40,8 +37,10 @@ import Header from "../Header.astro";
 					id="video1"
 					muted
 					loop
-					src={presentation}
-					class="w-full max-w-[530px] opacity-85">
+					playsinline
+					class="w-full max-w-[530px] opacity-85"
+					poster={poster.src}>
+					<source src={presentacionMp4} type="video/mp4" />
 				</video>
 			</picture>
 			<div id="text" class="pt-12 md:pt-0">
@@ -81,31 +80,12 @@ import Header from "../Header.astro";
 	<!-- <Scroll href="#FirstSection" /> -->
 </section>
 
-<script>
-	document.addEventListener("DOMContentLoaded", function () {
-		let video1 = document.getElementById("video1") as HTMLVideoElement;
-
-		// Reproduce el video cuando la página se carga
-		if (video1) {
-			video1.play().catch(function (error) {
-				console.log("Video 1 play failed:", error);
-			});
-		}
-
-		// Opcional: maneja el cambio de visibilidad de la pestaña
-		document.addEventListener("visibilitychange", function () {
-			if (document.visibilityState === "visible") {
-				if (video1 && video1.paused) {
-					video1.play().catch(function (error) {
-						console.log("Video 1 play failed:", error);
-					});
-				}
-			}
-		});
-	});
-</script>
-
 <style>
+	a,
+	span,
+	p {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
+	}
 	#video1 {
 		filter: contrast(125%);
 	}
