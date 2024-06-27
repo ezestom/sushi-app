@@ -1,5 +1,6 @@
 ---
 import upArrow from "../../icons/upArrow.svg";
+import { Form } from "../../components/Form/Form.jsx";
 ---
 
 <footer class="bg-[#262626] pt-20 text-[--secondary] relative z-10">
@@ -9,93 +10,73 @@ import upArrow from "../../icons/upArrow.svg";
 		class="bg-[--secondary] p-2 rounded-full absolute right-5 top-5 max-w-12 hover:scale-105 transition">
 		<img src={upArrow.src} class="" alt="arrow icon" />
 	</a>
-	<div class="w-full max-w-[1200px] mx-auto">
+	<div class="w-full max-w-[800px] mx-auto">
 		<div
-			class="grid grid-cols-2 md:place-items-center text-start px-8 py-6 lg:py-8 md:grid-cols-4">
+			class="grid grid-cols-2 md:place-items-center text-center px-4 py-6 lg:py-8">
 			<div>
-				<h2 class="mb-6 text-xl opacity-50 text-start md:pb-5">
-					Company
+				<h2 class="mb-2 text-2xl opacity-50 text-start md:pb-5">
+					Sushi App
 				</h2>
 				<ul class="text-sm text-start font-extralight">
 					<li class="mb-4">
-						<a href="#" class="hover:underline">About</a>
+						<Form
+							button="Trabaja con nosotros"
+							toast_message="Tu mensaje ha sido enviado con éxito"
+							name="Nombre y Apellido"
+							email="Email"
+							email_placeholder="ejemplo@email.com"
+							message="Mensaje"
+							message_placeholder="Escribe tu mensaje aquí..."
+							send="Enviar mi mensaje"
+							client:visible
+						/>
 					</li>
 					<li class="mb-4">
-						<a href="#" class="hover:underline">Careers</a>
+						<a href="/stores" class="hover:underline">Locales</a>
 					</li>
 					<li class="mb-4">
-						<a href="#" class="hover:underline">Brand Center</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Blog</a>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<h2 class="mb-6 text-xl opacity-50 text-start md:pb-5">
-					Help center
-				</h2>
-				<ul class="text-sm text-start font-extralight">
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Discord Server</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Twitter</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Facebook</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Contact Us</a>
-					</li>
-				</ul>
-			</div>
-			<div>
-				<h2 class="mb-6 text-xl opacity-50 text-start md:pb-5">
-					Legal
-				</h2>
-				<ul class="text-sm text-start font-extralight">
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Privacy Policy</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Conditions </a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">Licensing</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline"
-							>Terms &amp; Conditions</a
+						<a
+							href="tel:+123456789"
+							target="_blank"
+							class="hover:underline">Teléfono</a
 						>
 					</li>
 				</ul>
 			</div>
 			<div>
-				<h2 class="mb-6 text-xl opacity-50 text-start md:pb-5">
-					Download
+				<h2 class="mb-2 text-2xl opacity-50 text-start md:pb-5">
+					Redes Sociales
 				</h2>
 				<ul class="text-sm text-start font-extralight">
 					<li class="mb-4">
-						<a href="#" class="hover:underline">iOS</a>
+						<a
+							target="_blank"
+							href="https://www.instagram.com/sushiapp/"
+							class="hover:underline">Instagram</a
+						>
 					</li>
 					<li class="mb-4">
-						<a href="#" class="hover:underline">Android</a>
+						<a
+							target="_blank"
+							href="https://www.facebook.com/sushiapp/?locale=es_LA"
+							class="hover:underline">Facebook</a
+						>
 					</li>
 					<li class="mb-4">
-						<a href="#" class="hover:underline">Windows</a>
-					</li>
-					<li class="mb-4">
-						<a href="#" class="hover:underline">MacOS</a>
+						<a
+							target="_blank"
+							href="https://wa.me/5491130777777"
+							class="hover:underline">Whatsapp</a
+						>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<div class="px-4 py-6 md:flex md:items-center textstify-between">
+		<!-- <div class="px-4 py-6 md:flex md:items-center textstify-between">
 			<span class="text-xs sm:text-center"
 				>© 2024 <a href="https://flowbite.com/">Rhino™</a>. All Rights
 				Reserved.
 			</span>
-		</div>
+		</div> -->
 	</div>
 </footer>
