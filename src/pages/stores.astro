@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import MapComp from "../components/Map/MapComp";
-import Header from "../components/Header.astro";
+import HeaderStores from "../components/HeaderStores.astro";
 import Footer from "../components/sections/Footer.astro";
 ---
 
@@ -11,11 +11,11 @@ import Footer from "../components/sections/Footer.astro";
 
 <Layout title="Sucursales">
 	<section
-		class="bg-[#292929] h-[70vh] md:min-h-[85vh] w-full relative"
+		class="bg-[#292929] md:min-h-[75vh] w-full relative"
 		transition-style="in:circle:center">
-		<Header href2="/navbar" />
+		<HeaderStores href2="/navbar" />
 		<h2
-			class="font-[--text1] text-[--secondary] text-6xl md:text-8xl pb-0 flex items-center justify-center my-10">
+			class="font-[--text1] text-[--secondary] text-6xl md:text-8xl pb-0 flex items-center justify-center my-10 text-center">
 			App Sushi Sucursales
 		</h2>
 

@@ -1,0 +1,35 @@
+---
+import logo from "../img/logo_verde_logo.png";
+import sushi from "../icons/sushi.svg";
+import CursorFollow from "../components/CursorFollow.jsx";
+import StartButton from "../components/StartButton.astro";
+interface HeaderProps {
+	href2: string;
+}
+const { href2 } = Astro.props;
+---
+
+<header
+	class="h-[100px] p-6 max-w-full w-full flex justify-between items-center z-100">
+	<StartButton href={href2} />
+
+	<a
+		href="/"
+		class="max-w-[250px] hidden md:block w-full z-20 fixed mx-auto left-0 right-0">
+		<img src={logo.src} alt="logo icon" />
+	</a>
+
+	<div class="flex flex-grow basis-0 justify-end gap-1">
+
+		<span class="z-20 top-8 fixed">
+			<CursorFollow client:load />
+		</span>
+	</div>
+</header>
+
+<style>
+	a {
+		filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 1));
+		z-index: 100;
+	}
+</style>

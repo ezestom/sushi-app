@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import sushi from "../../icons/sushi.svg";
 import { GoogleMap, Marker, useLoadScript } from "@react-google-maps/api";
 import "./MapComp.css";
 
@@ -65,10 +65,11 @@ const MapComp = () => {
 	return (
 		<section className="map-section">
 			<article>
-				{/* <div className="sucursal-container">
-					<h4>Sucursal</h4>
+				<div className="sucursal-container ">
+					<h4 className="text-[--secondary] font-bold text-xl">Sucursales: </h4>
 					<div className="select-container">
 						<select
+							className="bg-[--secondary] ] text-sm text-[--primary] px-6 py-3 rounded-full transition  flex items-center justify-center  cursor-pointer gap-2 z-20 font-semibold"
 							value={selectedOption}
 							onChange={handleSelectChange}
 							defaultValue="0">
@@ -83,7 +84,14 @@ const MapComp = () => {
 							))}
 						</select>
 					</div>
-				</div> */}
+					<button
+						className="bg-[--secondary] ] text-sm text-[--primary] px-6 py-3 rounded-full transition hover:scale-105 flex items-center justify-center font-light cursor-pointer gap-2 z-20 "
+						onClick={() => handleRedirect()}>
+						{" "}
+						<img src={sushi.src} alt="sushi icon" class="max-w-6" />
+						Hacer mi pedido
+					</button>
+				</div>
 				{!isLoaded ? (
 					<div className="spinner"></div>
 				) : (
@@ -104,10 +112,6 @@ const MapComp = () => {
 						</GoogleMap>
 					</div>
 				)}
-				{/* <button className="order" onClick={() => handleRedirect()}>
-					{" "}
-					Hacer mi pedido
-				</button> */}
 			</article>
 		</section>
 	);

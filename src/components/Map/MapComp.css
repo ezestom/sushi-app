@@ -12,26 +12,23 @@
 		transform: rotate(360deg);
 	}
 } */
-
-.map-container {
-	/* height: 50vh; */
-	width: 100%;
-	position: absolute;
-	top: 100px;
-	left: 0;
-	height: 100%;
+.sucursal-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: .5rem;
+	padding: 1rem;
+	font-size: 1rem;
 }
-
 .map {
-	margin: auto;
-	box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
 	width: 100%;
-	height: 800px;
+	height: 500px;
 }
 .gm-style-mtc button {
 	display: none !important;
 }
- .gm-control-active button{
+.gm-control-active button {
 	display: none !important;
 }
 
